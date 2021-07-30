@@ -1,0 +1,54 @@
+.header,.footer{
+    height: 100px;
+    color:rgb(255, 0, 0);
+    background-color: bisque;
+    text-transform: uppercase;
+}
+
+.main{
+    text-align: center;
+    background-color: beige;
+}
+
+h1 {
+    background-color: rgb(0, 0, 255);
+}
+
+h2 {
+    background-color: rgb(102, 255, 0);
+}
+
+h3 {
+    background-color: rgb(255, 0, 0);
+}
+
+h4 {
+    background-color: rgb(251, 255, 0);
+}
+
+h5 {
+    background-color: rgb(0, 238, 255);
+}
+
+h6 {
+    background-color: rgb(4, 0, 255);
+}
+
+p{
+    color:rgb(234, 0, 255);
+}
+p.a{
+    text-align: left;
+}
+
+p.b{
+    text-align: center;
+}
+
+p.c{
+    text-align: right;
+}
+
+div{
+    background-color: rgb(162, 223, 170);
+}
