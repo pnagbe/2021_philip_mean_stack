@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simply Blogging</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript" src="blogging.js"></script>
+    <style>
+        input,span,button,.card{
+            margin-bottom: 10px;
+        }
+        .card{
+            width: 225px;
+            height: 300px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body style="padding: 10px;" onload="displayData()">
+    <h3 style="text-align: center;">Simply Blogging</h3>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <a class="navbar-brand" href="index.html">Add Blog</a>
+            <a class="navbar-brand" href="#">Home</a>
+            <a class="navbar-brand" href="#">AboutUs</a>
+            <a class="navbar-brand" href="#">Contacts</a>
+        </nav>
+  </div>
+  <div class="w-50">
+    <form method="GET" >
+        <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Title</span>
+            </div>
+            <input type="text" id="title" class="form-control">
+        </div>
+        <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Article</span>
+            </div>
+            <input type="text" id="article" class="form-control">
+        </div>
+        <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Add Image</span>
+            </div>
+            <input type="text" id="image" class="form-control">
+        </div>
+        <button type="submit" onclick="getData();displayData();//form.reset();" class="btn btn-primary">Add Blog</button>
+    </form>
+    </div>
+    <div id="display" class="row">
+    </div>
+</body>
+</html>
