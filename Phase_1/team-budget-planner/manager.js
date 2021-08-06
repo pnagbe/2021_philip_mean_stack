@@ -3,7 +3,9 @@ function getData(){
     let pname = document.getElementById('projname').value;
     let bname = document.getElementById('budget').value;
 
-    let formData = {'cname':cname, 'pname':pname, 'bname':bname};
+    let formData = {'client':cname, 'project':pname, 'budget':bname};
 
-    localStorage.setItem("tableData",JSON.stringify(formData));
+    let tableData = JSON.parse(localStorage.getItem("tableData") || "[]");
+    tableData.push(formData);
+    localStorage.setItem("tableData",JSON.stringify(tableData));
 }
