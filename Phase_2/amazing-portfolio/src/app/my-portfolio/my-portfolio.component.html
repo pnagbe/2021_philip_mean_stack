@@ -1,0 +1,44 @@
+<div *ngIf="login">
+    <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
+        <h2>Login Form</h2>
+        <label>Username:</label>
+        <input type="text" formControlName="user"/><br/>
+        <label>Password: </label>
+        <input type="password" formControlName="pass"/><br/>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+        <a href="#" (click)="swap(2)">Sign Up</a><br/>
+        {{msg}}
+    </form>
+</div>
+<div *ngIf="signup">
+    <form [formGroup]="signupRef" (ngSubmit)="addUser()">
+        <h2>Registration Form</h2>
+        <label>First Name</label>
+        <input type="text" formControlName="fname"/><br/>
+        <label>Last Name</label>
+        <input type="text" formControlName="lname"/><br/>
+        <label>Username:</label>
+        <input type="text" formControlName="user"/><br/>
+        <label>Password: </label>
+        <input type="password" formControlName="pass"/><br/>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+        <a href="#" (click)="swap(1)">Login</a><br/>
+        {{msg2}}
+    </form>
+</div>
+<div *ngIf="portfolio">
+    <form [formGroup]="portfolioRef" (ngSubmit)="addDetails()">
+        <p>Welcome {{user}}</p>
+        <input type="text" formControlName="cname"/><br/>
+        <input type="text" formControlName="pnum"/> <input type="submit" value="Save"/>
+        <table border="1">
+            <tr><th>Name</th><th>Phone No.</th></tr>
+            <tr *ngFor="let details of contacts">
+                <td>{{details.cname}}</td>
+                <td>{{details.pnum}}</td>
+            </tr>
+        </table>
+    </form>
+</div>
