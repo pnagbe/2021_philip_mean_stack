@@ -54,7 +54,7 @@ export class MyPortfolioComponent implements OnInit {
 
   checkUser(){
     let login = this.loginRef.value;
-    if(login.user == this.user && login.user == this.pass){
+    if(login.user == this.user && login.pass == this.pass){
       this.msg = "Succesful Login";
       this.swap(3);
     }

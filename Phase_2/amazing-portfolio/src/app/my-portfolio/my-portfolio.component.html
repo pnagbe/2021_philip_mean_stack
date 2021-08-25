@@ -31,7 +31,9 @@
 <div *ngIf="portfolio">
     <form [formGroup]="portfolioRef" (ngSubmit)="addDetails()">
         <p>Welcome {{user}}</p>
+        <label>Full Name</label>
         <input type="text" formControlName="cname"/><br/>
+        <label>Phone No.</label>
         <input type="text" formControlName="pnum"/> <input type="submit" value="Save"/>
         <table border="1">
             <tr><th>Name</th><th>Phone No.</th></tr>
