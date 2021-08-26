@@ -1,0 +1,12 @@
+[
+    {"question":"What is the square root of 16?","ans1":"2","ans2":"10","ans3":"4","ans4":"16","correct":"4","result":"","result2":""},
+    {"question":"What is 7 x 7?","ans1":"41","ans2":"36","ans3":"50","ans4":"49","correct":"49","result":"","result2":""},
+    {"question":"What is 101 + 50?","ans1":"160","ans2":"151","ans3":"2","ans4":"51","correct":"151","result":"","result2":""},
+    {"question":"What is 10 - 20?","ans1":"0","ans2":"30","ans3":"-10","ans4":"-20","correct":"-10","result":"","result2":""},
+    {"question":"What is 25 / 5","ans1":"5","ans2":"100","ans3":"25","ans4":"10","correct":"5","result":"","result2":""},
+    {"question":"What is the square root of 4?","ans1":"2","ans2":"8","ans3":"16","ans4":"20","correct":"2","result":"","result2":""},
+    {"question":"What is 100 / 25","ans1":"2","ans2":"8","ans3":"4","ans4":"50","correct":"4","result":"","result2":""},
+    {"question":"What is 10000 / 10000","ans1":"2","ans2":"10000","ans3":"100","ans4":"1","correct":"1","result":"","result2":""},
+    {"question":"What is the square root of 81?","ans1":"8","ans2":"9","ans3":"10","ans4":"11","correct":"9","result":"","result2":""},
+    {"question":"What is 8 + 8?","ans1":"10","ans2":"4","ans3":"16","ans4":"22","correct":"16","result":"","result2":""}
+]

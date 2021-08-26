@@ -1,0 +1,21 @@
+<div>
+    <h2>Online Test Application</h2>
+    <form [formGroup]="examRef" (ngSubmit)="submit()">
+        <div *ngFor="let q of questions">
+            <p>{{q.question}}</p>
+            <input type="radio" formControlName={{q.question}} value={{q.ans1}}/>{{q.ans1}}<br/>
+            <input type="radio" formControlName={{q.question}} value={{q.ans2}}/>{{q.ans2}}<br/>
+            <input type="radio" formControlName={{q.question}} value={{q.ans3}}/>{{q.ans3}}<br/>
+            <input type="radio" formControlName={{q.question}} value={{q.ans4}}/>{{q.ans4}}<br/>
+            <div>
+                <br/><span class="green">{{q.result}}</span><span class="red" >{{q.result2}}</span>
+            </div>
+        </div>
+        <div>
+            <br/><span class="green" [innerText]="passmsg"></span><span class="red" [innerText]="failmsg"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</div>
