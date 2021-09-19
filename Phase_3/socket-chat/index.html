@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();
+
+        function sendMessage(){
+            let output = document.getElementById("output");
+            let username = document.getElementById("username");
+            let message = document.getElementById("message");
+
+            output.innerHTML += username.value+": "+message.value+"<br/>";
+
+            socket.emit("obj",username.value+": "+message.value);
+        }
+
+        socket.on("obj1",(msg)=> {
+            setTimeout(function() {
+                output = document.getElementById("output");
+                output.innerHTML += msg+"<br/>";
+            },500);
+        })
+
+
+    </script>
+</head>
+<body>
+    <div style="height: 600px; margin-left: 35%;" class="container">
+        <ul id="output"></ul>
+    </div>
+    <div class="container w-25">
+            <label>Username</label>
+            <input type="text" class="form-control" id="username">
+            <label>Message</label>
+            <input type="text" class="form-control" id="message">
+            <input type="submit" class="btn btn-primary" onclick="sendMessage()">
+    </div>
+</body>
+</html>
